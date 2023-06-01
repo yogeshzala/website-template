@@ -39,7 +39,9 @@
 header {
   display: flex;
   justify-content: space-around;
-  background: rgba(235, 233, 218, 0.8);
+  background: #ebe9da;
+  position: fixed;
+  width: 100%;
 }
 
 .header,
@@ -51,8 +53,8 @@ ul {
 }
 
 .header {
-  height: 125px;
-  width: 60%;
+  height: 100px;
+  width: 80%;
   gap: 30px;
 }
 
@@ -89,6 +91,7 @@ a:hover {
 }
 
 .hero-container {
+  padding-top: 100px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -96,13 +99,13 @@ a:hover {
 }
 
 .hero {
-  width: 60%;
+  width: 80%;
 }
 
 h1 {
   font-family: "Oswald bold";
-  font-size: 80px;
-  line-height: 88px;
+  font-size: 70px;
+  line-height: 75px;
   color: #000000;
   max-width: 730px;
 }
@@ -124,28 +127,24 @@ h1 {
 .btn {
   font-family: "Roboto bold";
   font-size: 15px;
-  line-height: 23px;
+  line-height: 20px;
   color: #ffffff;
   background-color: #b32317;
-  height: 50px;
-  padding: 0px 30px;
+  padding: 15px 30px;
   border: none;
   outline: 1px solid #000000;
   outline-offset: 4px;
-}
-
-.hero .btn {
-  width: 160px;
+  cursor: pointer;
 }
 
 .about-container {
-  padding: 90px 0px;
+  padding: 150px 0px;
   display: flex;
   justify-content: space-around;
 }
 
 .about {
-  width: 60%;
+  width: 80%;
   display: flex;
   justify-content: space-around;
   gap: 60px;
@@ -154,14 +153,16 @@ h1 {
 h6 {
   font-family: "Roboto slab bold";
   font-size: 20px;
-  line-height: 30px;
+  line-height: 25px;
   color: #b32317;
 }
 
 h2 {
   font-family: "Oswald bold";
-  font-size: 52px;
-  line-height: 100px;
+  font-size: 50px;
+  line-height: 70px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 p {
@@ -174,6 +175,11 @@ p {
   outline: 1px solid #ffffff;
   outline-offset: -12px;
   float: right;
+}
+
+.about-img-container {
+  display: flex;
+  align-items: center;
 }
 
 .about-imgs {
@@ -191,7 +197,7 @@ p {
 }
 
 .type {
-  width: 60%;
+  width: 80%;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -243,11 +249,11 @@ h3 {
 .market-container {
   display: flex;
   justify-content: space-around;
-  padding: 90px 0px;
+  padding: 150px 0px;
 }
 
 .market-head {
-  width: 60%;
+  width: 80%;
 }
 
 .markets {
@@ -267,7 +273,7 @@ h3 {
 h5 {
   font-family: "Roboto slab bold";
   font-size: 28px;
-  line-height: 28px;
+  line-height: 33px;
   color: #b32317;
 }
 
@@ -288,13 +294,17 @@ h5 {
 .right {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 55px;
 }
 
+.middle-container {
+  display: flex;
+  align-items: center;
+}
+
 .market-img {
-  width: 57px;
-  height: 73px;
+  height: 70px;
 }
 
 h4 {
@@ -318,6 +328,8 @@ h4 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .quote p {
@@ -328,11 +340,11 @@ h4 {
 .coffee-container {
   display: flex;
   justify-content: space-around;
-  padding: 90px 0px;
+  padding: 150px 0px;
 }
 
 .coffee {
-  width: 60%;
+  width: 80%;
 }
 
 footer {
@@ -349,8 +361,12 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 15px;
-  width: 60%;
+  width: 80%;
   flex-wrap: wrap;
+}
+
+.social-img {
+  cursor: pointer;
 }
 
 .addr p {
@@ -372,9 +388,9 @@ footer {
 }
 
 .copy {
-  width: 60%;
+  width: 80%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
   gap: 30px;
   color: #ffffff;
@@ -396,7 +412,8 @@ footer {
 .header-list {
   width: 100%;
   background: rgba(235, 233, 218, 0.8);
-  position: absolute;
+  position: fixed;
+  margin-top: 99px;
 }
 
 .header-list-items {
@@ -465,9 +482,19 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
+  .btn {
+    font-size: 10px;
+    line-height: 15px;
+    padding: 10px 25px;
+  }
   h1 {
     font-size: 35px;
     line-height: 40px;
+  }
+  .hero-txt p {
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 15px;
   }
   h2 {
     font-size: 30px;
@@ -481,8 +508,19 @@ footer {
     font-size: 20px;
     line-height: 25px;
   }
+  h5 {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  h6 {
+    font-size: 18px;
+    line-height: 23px;
+  }
   .middle {
-    height: 320px;
+    width: 100%;
+  }
+  .market-img {
+    height: 50px;
   }
 }
 
@@ -494,7 +532,7 @@ footer {
     font-size: 30px;
   }
   .type-box p {
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 13px;
+    line-height: 15px;
   }
 }

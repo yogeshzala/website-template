@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Split Rock Coffee</title>
+    <link rel="icon" href="./images/icon.png" />
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -12,7 +13,9 @@
     />
   </head>
   <body>
+    <!-- Home -->
     <section class="hero-img" id="home">
+      <!-- Navbar -->
       <header>
         <div class="header">
           <img class="txt-logo" src="images/txt-logo.png" alt="Logo" />
@@ -33,11 +36,7 @@
             </ul>
             <div class="mobile-container">
               <div class="mobile-header">
-                <a
-                  href="javascript:void(0);"
-                  class="icon"
-                  onclick="myFunction()"
-                >
+                <a href="javascript:void(0);" class="icon" onclick="toggle()">
                   <i class="fa fa-bars"></i>
                 </a>
               </div>
@@ -45,30 +44,32 @@
           </nav>
         </div>
       </header>
-      <div id="myLinks" style="display: none;">
+      <div id="navLink" style="display: none">
         <div class="header-list">
           <div class="header-list-items">
-            <hr>
-            <a href="#home">HOME</a><hr>
-            <a href="#ourStory">OUR STORY</a><hr>
-            <a href="#ourMarkets">OUR MARKETS</a><hr>
-            <a href="#ourCoffee">OUR COFFEE</a><hr>
-            <a href="#Products">PRODUCTS</a><hr>
-            <a href="#contact">CONTACT</a><hr>
-            <a href="#shop">SHOP</a>
+            <a href="#home" onclick="toggle()">HOME</a>
+            <a href="#ourStory" onclick="toggle()">OUR STORY</a>
+            <a href="#ourMarkets" onclick="toggle()">OUR MARKETS</a>
+            <a href="#ourCoffee" onclick="toggle()">OUR COFFEE</a>
+            <a href="#Products" onclick="toggle()">PRODUCTS</a>
+            <a href="#contact" onclick="toggle()">CONTACT</a>
+            <a href="#shop" onclick="toggle()">SHOP</a>
           </div>
         </div>
       </div>
+
+      <!-- Hero -->
       <section class="hero-container">
         <div class="hero">
           <div class="hero-txt">
             <h1>DELIVERING COFFEEHOUSE FLAVOR</h1>
             <p>Retail | Workplace | Hospitality | Fundraising</p>
-            <button class="btn">LEARN MORE</button>
           </div>
+          <button class="btn">LEARN MORE</button>
         </div>
       </section>
     </section>
+
     <section class="about-container" id="ourStory">
       <div class="about">
         <div>
@@ -109,7 +110,7 @@
           <br /><br />
           <button class="btn">OUR MARKETS</button>
         </div>
-        <div>
+        <div class="about-img-container">
           <div class="about-imgs">
             <img class="about-img" src="images/about-img-1.png" />
             <img class="about-img" src="images/about-img-2.jpg" />
@@ -191,7 +192,7 @@
               />
             </div>
           </div>
-          <div>
+          <div class="middle-container">
             <img class="middle" src="images/coffee-cup.png" alt="" />
           </div>
           <div class="right">
@@ -300,6 +301,8 @@
       <br /><br />
       <p>— Earl Wilson</p>
     </section>
+
+    <!-- Footer -->
     <footer id="contact">
       <div class="footer">
         <img src="images/logo.png" alt="" />
@@ -311,26 +314,33 @@
             <b>EMAIL</b> info@splitrockcoffee.com
           </p>
           <br /><br />
-          <img src="images/social.png" alt="" />
+          <div>
+            <img class="social-img" src="./images/social/facebook.png" alt="facebook" />
+            <img class="social-img" src="./images/social/twitter.png" alt="twitter" />
+            <img class="social-img" src="./images/social/linkedin.png" alt="linkedin" />
+            <img class="social-img" src="./images/social/google+.png" alt="google+" />
+          </div>
         </div>
       </div>
       <div class="copy-container">
         <div class="copy">
           <p>
-            ©2018 Split Rock Coffee Company. All rights reserved. Site by
-            Yogesh Zala.
+            ©2018 Split Rock Coffee Company. All rights reserved. Site by Yogesh
+            Zala.
           </p>
           <p>DOWNLOAD BROCHURE | PRIVACY & USER POLICY</p>
         </div>
       </div>
     </footer>
+
+    <!-- JavaScript -->
     <script>
-      function myFunction() {
-        var x = document.getElementById("myLinks");
-        if (x.style.display === "block") {
-          x.style.display = "none";
+      function toggle() {
+        let list = document.getElementById("navLink");
+        if (list.style.display === "block") {
+          list.style.display = "none";
         } else {
-          x.style.display = "block";
+          list.style.display = "block";
         }
       }
     </script>
