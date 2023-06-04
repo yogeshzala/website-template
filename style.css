@@ -175,6 +175,7 @@ p {
   outline: 1px solid #ffffff;
   outline-offset: -12px;
   float: right;
+  max-width: 300px;
 }
 
 .about-img-container {
@@ -298,9 +299,14 @@ h5 {
   gap: 55px;
 }
 
+.middle {
+  width: 100%;
+}
+
 .middle-container {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .market-img {
@@ -360,13 +366,15 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px;
+  gap: 50px;
   width: 80%;
   flex-wrap: wrap;
 }
 
 .social-img {
   cursor: pointer;
+  max-width: 40px;
+  margin-right: 10px;
 }
 
 .addr p {
@@ -472,12 +480,18 @@ footer {
   nav p {
     display: none;
   }
+  .middle {
+    width: 50%;
+  }
 }
 
 @media screen and (max-width: 703px) {
   .about-imgs {
     display: grid;
     grid-template-columns: auto;
+  }
+  .middle {
+    width: 100%;
   }
 }
 
